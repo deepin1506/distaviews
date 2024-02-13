@@ -1,0 +1,259 @@
+// Header css start
+.header-main {
+  padding: 33px 15px;
+  background-color: transparent;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1648px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  z-index: 9;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 521px;
+
+    .header-menu {
+      flex-grow: 2;
+
+      .navbar-toggler {
+        display: none;
+      }
+
+      .header-menu-main {
+        .navbar-nav {
+          flex-direction: row;
+          justify-content: space-around;
+          display: flex;
+
+          .nav-link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: white;
+            padding: 0 20px;
+            transition: 0.4s ease-in;
+
+            &:hover {
+              color: green;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .header-buttons {
+      flex-grow: 1;
+      text-align: end;
+    }
+  }
+}
+
+.header {
+  transition: 0.5s ease-in;
+}
+
+.header.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transform: translateY(0px);
+  background: black;
+}
+
+.header-menu-main .mobile-toogle-btn {
+  display: block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background: #1e1e1e;
+  opacity: 0.6;
+  z-index: 0;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+  z-index: 1;
+}
+
+.mobile-toogle-btn,
+.menu-close-btn {
+  display: none;
+}
+
+.main-content.header-fixed-top {
+  padding-top: 85px;
+}
+
+.main-content.header-fixed-top .header-main {
+  padding: 20px 15px;
+}
+
+@media (max-width: 1199px) {
+  .header-main {
+    padding: 18px 15px;
+
+    .header-right {
+      max-width: 420px;
+      justify-content: center;
+
+      .header-menu {
+        flex-grow: unset;
+      }
+    }
+  }
+
+  .main-content.header-fixed-top .header-main {
+    padding: 18px 15px;
+  }
+
+  .main-content.header-fixed-top {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-main {
+    .header-right .header-menu .mobile-toogle-btn {
+      width: 45px;
+      height: 45px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: green;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+      transition: 0.5s ease-in;
+      z-index: 9;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        background-color: black;
+      }
+    }
+
+    .header-menu-main .mobile-menu.menu-open {
+      transform: translateX(0);
+    }
+
+    .header-menu-main .mobile-menu {
+      padding: 15px;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      background-color: black;
+      z-index: 99;
+      right: 0;
+      top: 0;
+      transition: 0.5s ease-in;
+      transform: translateX(300px);
+    }
+
+    .header-right .header-menu .header-menu-main .navbar-nav {
+      flex-direction: column;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+      padding-right: 56px;
+
+      a {
+        font-size: 0;
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+    }
+
+    .header-right .header-menu .header-menu-main .navbar-nav .nav-link {
+      padding: 5px 0;
+    }
+
+    .header-right .header-menu .header-menu-main .navbar-nav .nav-link:hover {
+      transform: translateX(8px);
+    }
+
+    .header-right {
+      max-width: unset;
+      width: unset;
+    }
+
+    .menu-close-btn {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .header-main {
+    padding: 12px;
+
+    .header-menu-main .mobile-menu {
+      width: 250px;
+      transform: translateX(250px);
+    }
+
+    .header-right .header-menu .mobile-toogle-btn,
+    .header-buttons a {
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      top: 12px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .header-buttons {
+      padding-right: 46px;
+    }
+  }
+
+  .main-content.header-fixed-top {
+    padding-top: 60px;
+  }
+
+  .main-content.header-fixed-top .header-main {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-main {
+    .logo-wrapper-main {
+      width: 150px;
+    }
+  }
+}
+
+// Header css end

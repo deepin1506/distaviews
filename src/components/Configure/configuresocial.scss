@@ -1,0 +1,129 @@
+.configure-page {
+  .landing-btn {
+    max-width: 453px;
+    margin: auto;
+  }
+
+  .configure-section {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .configure-left-img {
+    max-width: 459px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+// Social start
+
+.social-wrapper {
+  display: flex;
+  gap: 75px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .social-btn {
+    background: linear-gradient(270deg, #1e1e1e 0%, rgba(39, 70, 43, 0.5) 100%);
+    border: 2px solid bgblack;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 240px;
+    padding: 17px 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: lightwhite;
+    transition: 0.5s ease-in;
+
+    &:hover {
+      border-color: green;
+      background: linear-gradient(
+        270deg,
+        #1e1e1e 0%,
+        rgba(39, 70, 43, 0.5) 100%
+      );
+    }
+  }
+}
+
+.configure-text {
+  max-width: 577px;
+  width: 100%;
+}
+
+@media (max-width: 1919px) {
+  .social-wrapper {
+    gap: 24px;
+    justify-content: start;
+  }
+
+  .social-wrapper .social-btn {
+    width: 195px;
+  }
+}
+
+@media (max-width: 991px) {
+  .configure-page .configure-section {
+    margin: 50px auto;
+  }
+
+  .configure-icon svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .configure-page .configure-left-img {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .configure-icon svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .configure-page .configure-left-img {
+    max-width: 300px;
+  }
+
+  .social-wrapper {
+    .social-btn {
+      width: auto;
+      padding: 15px 18px;
+    }
+
+    .social-name {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .social-wrapper {
+    gap: 8px;
+
+    .social-btn {
+      padding: 12px;
+    }
+
+    .social-icon img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .shap-img {
+    svg {
+      width: 200px;
+      margin-top: -40px;
+    }
+  }
+}
+
+// Social end

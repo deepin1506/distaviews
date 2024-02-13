@@ -1,0 +1,470 @@
+// Search css start
+.title-card {
+  display: flex;
+  background: linear-gradient(270deg, #1e1e1e 0%, #252923 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  z-index: 2;
+  position: -webkit-sticky;
+  top: 80px;
+
+  .s-title {
+    padding: 21px;
+  }
+
+  .nav {
+    gap: 100px;
+    margin-right: 54px;
+
+    .nav-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: lightwhite;
+      background: transparent;
+      border-bottom: 4px solid transparent;
+      border-radius: 2px;
+      padding: 21px 0;
+
+      &.active {
+        background-color: transparent;
+        border-color: green;
+      }
+    }
+  }
+}
+
+.quik-search-wrapper {
+  max-width: 1003px;
+  width: 100%;
+  margin: auto;
+
+  h1 {
+    max-width: 609px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.search-input-wrapper {
+  background: #262626;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 8px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search-icon {
+    padding: 14px;
+  }
+
+  .search-input {
+    width: calc(100% - 60px);
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #a4a4a4;
+  }
+
+  .search-btn {
+    background: green;
+    border-radius: 6px;
+    padding: 12px 24px;
+    border: 2px solid green;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    transition: 0.5s ease-in;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.search-section {
+  display: none;
+}
+
+.search-dropdown {
+  background: #272727;
+  box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+  border-radius: 5px;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: white;
+}
+
+.start-example {
+  background: #383838;
+  box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+  border-radius: 5px 5px 0px 0px;
+  padding: 18px 28px;
+}
+
+.s-dropdown-box {
+  padding: 0 28px;
+  max-height: 225px;
+  height: 100%;
+  overflow-x: auto;
+
+  .s-item {
+    display: block;
+    padding: 18px 0;
+    border-bottom: 1px solid #414141;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      color: #71717e;
+    }
+  }
+}
+
+.custom-scrollbar {
+  margin-right: 6px;
+  margin-top: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: 30px;
+}
+
+.recent-search-wrapper {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #adb8cc;
+
+  .search-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .searchlist-item {
+      background: green;
+      border-radius: 65px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 24px;
+      color: white;
+      cursor: pointer;
+      padding: 9.5px 32px;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info {
+  display: none;
+}
+
+.total-savesearch {
+  background: linear-gradient(270deg, #1e1e1e 0%, #252923 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  color: lightwhite;
+  padding: 21px;
+}
+
+.custom-tbl {
+  .table {
+    width: 100%;
+    background: linear-gradient(270deg, #1e1e1e 0%, #252923 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #e8ecef;
+
+    thead {
+      background: linear-gradient(270deg, #1e1e1e 0%, #252923 100%);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      th {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        padding: 22px;
+        border-bottom: 7px solid bgblack;
+      }
+    }
+
+    tbody td {
+      padding: 22px;
+      border-bottom: 1px solid #373737;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    thead th:first-child {
+      border-radius: 15px 0 0 0;
+    }
+
+    thead th:last-child {
+      border-radius: 0 15px 0 0;
+    }
+  }
+}
+
+.dataTables_wrapper {
+  padding-bottom: 6px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dataTables_paginate {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
+  background: #272727;
+  position: sticky;
+  left: 0;
+  position: -webkit-sticky;
+}
+
+.paginate_button.previous,
+.paginate_button.next {
+  background: #181818;
+  border-radius: 7px;
+  padding: 14px 22px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.paginate_button {
+  border-radius: 7px;
+  padding: 6px 12px;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &.current,
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #1ea71b;
+    color: white;
+  }
+}
+
+// .dashboard-inner-section.title-fixed {
+//     padding-top: 52px;
+// }
+
+#SaveSearch {
+  min-width: 1650px;
+}
+
+@media (max-width: 1499px) {
+  .title-card {
+    top: 70px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .search-input-wrapper .search-btn {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 991px) {
+  .title-card {
+    .nav {
+      gap: 50px;
+      margin-right: 40px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .search-input-wrapper .search-btn {
+    font-size: 16px;
+    line-height: normal;
+    padding: 10px 16px;
+  }
+
+  .recent-search-wrapper .search-list .searchlist-item {
+    padding: 4px 20px;
+    font-size: 14px;
+  }
+
+  .search-input-wrapper .search-input {
+    width: calc(100% - 65px);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title-card {
+    .s-title {
+      padding: 15px;
+    }
+
+    .nav {
+      gap: 30px;
+      margin-right: 20px;
+
+      .nav-link {
+        padding: 15px 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .total-savesearch {
+    padding: 15px;
+  }
+
+  .custom-tbl {
+    .table {
+      tbody td,
+      thead th {
+        padding: 15px;
+      }
+
+      thead th {
+        border-bottom: 4px solid #151515;
+      }
+    }
+  }
+
+  // .dashboard-inner-section.title-fixed {
+  //     padding-top: 65px;
+  // }
+}
+
+@media (max-width: 574px) {
+  .search-input-wrapper {
+    .search-btn {
+      font-size: 14px;
+    }
+
+    .search-icon {
+      padding: 0 8px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .search-input-wrapper {
+    min-height: 60px;
+  }
+
+  .title-card {
+    top: 55px;
+  }
+
+  .custom-tbl {
+    .table {
+      thead th {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+
+      tbody td {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .dataTables_paginate {
+    border-radius: 6px;
+    padding: 6px 2px;
+  }
+
+  .paginate_button.previous,
+  .paginate_button.next {
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .paginate_button {
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .title-card .nav {
+    gap: 25px;
+    margin-right: 10px;
+  }
+
+  // .dashboard-inner-section.title-fixed {
+  //     padding-top: 35px;
+  // }
+
+  .start-example {
+    padding: 15px;
+
+    svg {
+      width: 10px;
+      height: 12px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .search-dropdown {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .s-dropdown-box .s-item {
+    padding: 14px 0;
+  }
+
+  .custom-scrollbar {
+    margin-right: 4px;
+    margin-top: 5px;
+  }
+
+  .s-dropdown-box {
+    padding: 0 15px;
+  }
+}
+// Search css end
